@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Boletín Estudiantil</title>
+    <link rel="stylesheet" href="boletin.css">
+    <!-- Bootstrap y Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="boletin.js"></script>
+</head>
+<body onload="listarNotas()">
+    <div class="container mt-4">
+        <div class="logo mb-3">
+            <img src="logo.jpg" alt="Logo" />
+            <h2 class="text-secondary mt-3">Bienvenido a tu boletín estudiantil</h2>
+        </div>
+
+        <div class="estudiante mb-3">
+            <h3 class="text-dark"><i class="fas fa-user-graduate me-2"></i>Alumno: Exequiel Echevarria</h3>
+        </div>
+
+        <h4 class="mb-2">Notas:</h4>
+        <ul id="listaNotas" class="list-unstyled"></ul>
+
+        <div class="info mt-4">
+            <div class="mb-3">
+                <h4>
+                    <i class="fas fa-calculator me-2 text-primary"></i>
+                    Promedio: <span id="promedio"></span>
+                </h4>
+                <button class="btn btn-primary" onclick="calcularPromedio()">
+                    <i class="fas fa-equals me-1"></i>Calcular promedio
+                </button>
+            </div>
+            <div class="mb-3">
+                <h4>
+                    <i class="fas fa-arrow-up me-2 text-success"></i>
+                    Nota más alta: <span id="nota"></span>
+                </h4>
+                <button class="btn btn-success" onclick="notaMasAlta()">
+                    <i class="fas fa-search-plus me-1"></i>Buscar nota más alta
+                </button>
+            </div>
+            <div class="mb-3">
+                <h4>
+                    <i class="fas fa-exclamation-triangle me-2 text-warning"></i>
+                    ¿Hubo algún aplazo? <span id="aplazo"></span>
+                </h4>
+                <button class="btn btn-warning text-white" onclick="hayAplazo()">
+                    <i class="fas fa-question me-1"></i>Consultar aplazo
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
